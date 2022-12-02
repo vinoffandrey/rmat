@@ -2,15 +2,98 @@
 	background: #545D6A url(../img/main/pattern4.svg) 0 0 repeat;
 }
 .page {
-	margin-top: 20px;
-	margin-bottom: 30px;
 }
 .main {
-
+		&__title {
+			p{
+				@include adaptiveValue("margin-top", 25, 10, $containerWidth, $minWidth, 1);
+			}
+		}
 		&__section {
 		}
-
+		&__body {
+			margin-top: 20px;
+			margin-bottom: 30px;
+		}
 		&__container {
+
+		}
+		&__oprosnik {
+			display: inline-block;
+			@include adaptiveValue("margin-top", 50, 30, $containerWidth, $minWidth, 1);
+			@include adaptiveValue("margin-bottom", 15, 10, $containerWidth, $minWidth, 1);
+			&-buttons {
+				display: flex;
+				justify-content: space-around;
+				@include adaptiveValue("margin-top", 25, 15, $containerWidth, $minWidth, 1);
+				@include adaptiveValue("margin-bottom", 25, 15, $containerWidth, $minWidth, 1);
+			}
+			&-button {
+			 width: 100px;
+			}
+			&-text {
+				.answer__yes {
+				}
+				.answer__no {
+				}
+			}
+		}
+		&-slider__bullets {
+			display: flex;
+			justify-content: center;
+			gap: 5px;
+			@include adaptiveValue("margin-top", 40, 25, $containerWidth, $minWidth, 1);
+			.swiper-pagination-bullet {
+				width: 40px;
+				height: 40px;
+				border: 1px solid rgba(255, 255, 255, 0.4);
+				background-color: rgba(255, 255, 255, 0.15);
+				border-radius: 0;
+				font-size: 18px;
+				color: white;
+				opacity: .6;
+				transition: all .3s ease 0s;
+				&.swiper-pagination-bullet-active {
+					opacity: 1;
+				}
+				@media (any-hover: hover){
+					&:hover{
+						opacity: 1; 
+					} 
+				}
+				&:after {
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					width: 100%;
+					height: 100%;
+				}
+				&:nth-child(1) {
+					&:after {
+						content: "П";
+					}
+				}
+				&:nth-child(2) {
+					&:after {
+						content: "В";
+					}
+				}
+				&:nth-child(3) {
+					&:after {
+						content: "С";
+					}
+				}
+				&:nth-child(4) {
+					&:after {
+						content: "Ч";
+					}
+				}
+				&:nth-child(5) {
+					&:after {
+						content: "П";
+					}
+				}
+			}
 		}
 }
 .container {
@@ -21,18 +104,7 @@
 		}
 
 		&__navbar-item {
-			cursor: pointer;
-			font-weight: 500;
-			background-color: rgba(255, 255, 255, .15);
-			padding: 10px 15px;
-			border: 1px solid rgba(255, 255, 255, .4);
-			transition: all .3s ease 0s;
-			&:active {
-				background-color: rgba(255, 255, 255, .30);
-			}
-			&._tab-active {
-				background-color: rgba(255, 255, 255, .30);
-			}
+
 		}
 
 		&__body {
