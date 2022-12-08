@@ -147,3 +147,44 @@ function documentActions(e) {
 	}
 }
 
+//Управление опросником
+document.querySelectorAll('.oprosnik-1 .yes').forEach(function (item) {
+	item.addEventListener('click', function () {
+		const textClass = document.querySelector('.opros__oprosnik-1 .answer__yes');
+		const yesClass = document.querySelector('.opros__oprosnik-1 .yes');
+		const noClass = document.querySelector('.opros__oprosnik-1 .no');
+		textClass.removeAttribute('hidden');
+		yesClass.toggleAttribute('disabled');
+		noClass.toggleAttribute('disabled');
+	});
+});
+document.querySelectorAll('.oprosnik-1 .no').forEach(function (item) {
+	item.addEventListener('click', function () {
+		const textClass = document.querySelector('.opros__oprosnik-1 .answer__no');
+		const yesClass = document.querySelector('.opros__oprosnik-1 .yes');
+		const noClass = document.querySelector('.opros__oprosnik-1 .no');
+		textClass.removeAttribute('hidden');
+		yesClass.toggleAttribute('disabled');
+		noClass.toggleAttribute('disabled');
+	});
+});
+document.querySelectorAll('.oprosnik-2 .yes').forEach(function (item) {
+	item.addEventListener('click', function () {
+		const textClass = document.querySelector('.opros__oprosnik-2 .answer__yes');
+		const yesClass = document.querySelector('.opros__oprosnik-2 .yes');
+		const noClass = document.querySelector('.opros__oprosnik-2 .no');
+		textClass.removeAttribute('hidden');
+		yesClass.toggleAttribute('disabled');
+		noClass.toggleAttribute('disabled');
+	});
+});
+document.querySelectorAll('.oprosnik-2 .no').forEach(function (item) {
+	item.addEventListener('click', function () {
+		const textClass = document.querySelector('.opros__oprosnik-2 .answer__no');
+		const yesClass = document.querySelector('.opros__oprosnik-2 .yes');
+		const noClass = document.querySelector('.opros__oprosnik-2 .no');
+		textClass.removeAttribute('hidden');
+		yesClass.toggleAttribute('disabled');
+		noClass.toggleAttribute('disabled');
+	});
+});

@@ -1066,6 +1066,8 @@ body::-webkit-scrollbar-thumb {
 .opros__body {
   margin-top: 20px;
   margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
 }
 .opros__oprosnik {
   display: inline-block;
@@ -1102,6 +1104,8 @@ body::-webkit-scrollbar-thumb {
 }
 .opros__oprosnik-buttons {
   display: flex;
+  max-width: 600px;
+  margin: 0 auto;
   justify-content: space-around;
 }
 @media (min-width: 75em) {
