@@ -45,8 +45,8 @@ function initSliders() {
 	bildSliders();
 
 	// Перечень слайдеров
-	if (document.querySelector('.main__swiper')) {
-		new Swiper('.main__body-section', {
+	if (document.querySelector('.groups__swiper')) {
+		new Swiper('.groups__body-section', {
 			// Подключаем модули слайдера
 			// для конкретного случая
 			modules: [Navigation, Pagination, Autoplay],
@@ -70,7 +70,7 @@ function initSliders() {
 			lazy: true,
 			// Dotts
 			pagination: {
-				el: '.main-slider__bullets',
+				el: '.groups-slider__bullets',
 				clickable: true,
 			},
 			// Arrows

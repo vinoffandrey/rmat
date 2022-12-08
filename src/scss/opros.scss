@@ -1,0 +1,28 @@
+.opros {
+	&__title {
+		p{
+			@include adaptiveValue("margin-top", 25, 10, $containerWidth, $minWidth, 1);
+		}
+	}
+	&__section {
+		flex: 1 1 auto;
+	}
+	&__body {
+		margin-top: 20px;
+		margin-bottom: 30px;
+	}
+	&__oprosnik {
+		display: inline-block;
+		@include adaptiveValue("margin-top", 50, 30, $containerWidth, $minWidth, 1);
+		@include adaptiveValue("margin-bottom", 15, 10, $containerWidth, $minWidth, 1);
+		&-buttons {
+			display: flex;
+			justify-content: space-around;
+			@include adaptiveValue("margin-top", 25, 15, $containerWidth, $minWidth, 1);
+			@include adaptiveValue("margin-bottom", 25, 15, $containerWidth, $minWidth, 1);
+		}
+		&-button {
+		 width: 100px;
+		}
+	}
+}

@@ -1,12 +1,21 @@
 //====================================================================================================
+.callback {
 
+	&__section {
+		flex: 0 1 auto;
+	}
+
+	&__body {
+		text-align: center;
+		a {
+			text-decoration: underline;
+		}
+	}
+}
 //====================================================================================================
 .footer {
 	@include adaptiveValue("padding-top", 50, 20, $maxWidth, $minWidth, 1);
 	@include adaptiveValue("padding-bottom", 50, 20, $maxWidth, $minWidth, 1);
-	&__container {
-	}
-
 	&__body {
 		text-align: left;
 		a {

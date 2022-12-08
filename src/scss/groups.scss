@@ -1,0 +1,181 @@
+.groups {
+		&__title {
+			p{
+				@include adaptiveValue("margin-top", 25, 10, $containerWidth, $minWidth, 1);
+			}
+			h1 {
+				@include adaptiveValue("margin-top", 25, 10, $containerWidth, $minWidth, 1);
+			}
+		}
+		&__section {
+			flex: 1 1 auto;
+		}
+		&__body {
+			margin-top: 30px;
+			margin-bottom: 30px;
+			&-title {
+				text-align: center;
+				font-weight: 500;
+				font-size: 18px;
+				margin-bottom: 20px;
+			}
+		}
+		&__breadcrumbs {
+			@include adaptiveValue("margin-top", 25, 10, $containerWidth, $minWidth, 1);
+			ul {
+				display: flex;
+				gap: 20px;
+				li {
+					position: relative;
+					&:not(:last-child) {
+						&:after {
+							content: "›";
+							position: absolute;
+							right: -15px;
+							top: 0;
+							width: 10px;
+							height: 10px;
+							font-size: 20px;
+							color: white;
+						}
+					}
+				}
+				a {
+					text-decoration: underline;
+				}
+			}
+		}
+		&__navbar {
+			display: flex;
+			justify-content: space-between;
+		}
+
+		&__body-tab {
+			margin-top: 20px;
+		}
+
+		&__body-item {
+			background-color: rgba(255, 255, 255, .15);
+			border: 1px solid rgba(255, 255, 255, .4);
+			margin-bottom: 20px;
+		}
+		&__oprosnik {
+			display: inline-block;
+			@include adaptiveValue("margin-top", 50, 30, $containerWidth, $minWidth, 1);
+			@include adaptiveValue("margin-bottom", 15, 10, $containerWidth, $minWidth, 1);
+			&-buttons {
+				display: flex;
+				justify-content: space-around;
+				@include adaptiveValue("margin-top", 25, 15, $containerWidth, $minWidth, 1);
+				@include adaptiveValue("margin-bottom", 25, 15, $containerWidth, $minWidth, 1);
+			}
+			&-button {
+			 width: 100px;
+			}
+		}
+		&-slider__bullets {
+			display: flex;
+			justify-content: center;
+			gap: 5px;
+			@include adaptiveValue("margin-top", 40, 25, $containerWidth, $minWidth, 1);
+			.swiper-pagination-bullet {
+				width: 40px;
+				height: 40px;
+				border: 1px solid rgba(255, 255, 255, 0.4);
+				background-color: rgba(255, 255, 255, 0.15);
+				border-radius: 0;
+				font-size: 18px;
+				color: white;
+				opacity: .6;
+				transition: all .3s ease 0s;
+				&.swiper-pagination-bullet-active {
+					opacity: 1;
+				}
+				@media (any-hover: hover){
+					&:hover{
+						opacity: 1; 
+					} 
+				}
+				&:after {
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					width: 100%;
+					height: 100%;
+				}
+				&:nth-child(1) {
+					&:after {
+						content: "П";
+					}
+				}
+				&:nth-child(2) {
+					&:after {
+						content: "В";
+					}
+				}
+				&:nth-child(3) {
+					&:after {
+						content: "С";
+					}
+				}
+				&:nth-child(4) {
+					&:after {
+						content: "Ч";
+					}
+				}
+				&:nth-child(5) {
+					&:after {
+						content: "П";
+					}
+				}
+				&:nth-child(6) {
+					&:after {
+						content: "Сб";
+					}
+				}
+			}
+		}
+}
+.item {
+
+		&__top-day {
+			font-weight: 500;
+			font-size: 16px;
+			padding: 10px;
+			text-align: center;
+			border-bottom: 1px solid rgba(255, 255, 255, .4);
+		}
+
+		&__body {
+		}
+
+		&__body-line {
+			display: flex;
+			
+			font-weight: 500;
+			&:not(:last-child) {
+				border-bottom: 1px solid rgba(255, 255, 255, .4);
+			}
+		}
+
+		&__body-number {
+			padding: 10px;
+			flex: 0 0 105px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			text-align: center;
+			line-height: 17px;
+			border-right: 1px solid rgba(255, 255, 255, .4);
+		}
+
+		&__body-predmet {
+			padding: 10px;
+			text-align: center;
+			line-height: 18px;
+			display: flex;
+			flex: 1 1 auto;
+			align-items: center;
+			justify-content: center;
+		}
+}

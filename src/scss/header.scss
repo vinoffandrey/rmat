@@ -14,11 +14,12 @@
 	}
 	&__text {
 		display: flex;
-		margin-right: 60px;
+		padding-right: 70px;
+		position: relative;
 		&:after {
 			position: absolute;
-			top: 45px;
-			right: 50px;
+			top: 20px;
+			right: 10px;
 			content: "";
 			display: inline-block;
 			width: 70px;
